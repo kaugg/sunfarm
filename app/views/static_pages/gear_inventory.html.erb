@@ -1,0 +1,14 @@
+<h1 class="title is-2">
+  List of Gear
+</h1>
+
+<div class="columns is-multiline">
+<% @gear.each do |item| %>
+  <div class="column is-2">
+    <div class="box">
+      <%= fa_icon "home" %>
+      <%= item %>
+    </div>
+  </div>
+<% end %>
+</div>

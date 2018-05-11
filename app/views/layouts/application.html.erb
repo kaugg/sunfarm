@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SunFarm</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="box">
+        <h1 class="title is-2 has-text-centered">
+          SunFarm
+        </h1>
+
+        <div class="tabs is-centered">
+          <ul>
+            <li><%= link_to 'The Farm', controller: :static_pages, action: :index %></li>
+            <li><%= link_to 'Gear Inventory', controller: :static_pages, action: :gear_inventory %></li>
+            <li><%= link_to 'How to Build It', controller: :static_pages, action: :how_to_build_it %></li>
+            <li><%= link_to 'By the Numbers', controller: :static_pages, action: :by_the_numbers %></li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <%= yield %>
+        </div>
+
+      </div>
+    </section>
+  </body>
+</html>
